@@ -1,26 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { CountryList } from "./components/CountryList/CountryList";
+import countries from "./country-data.json";
+import { gettransformedCountries } from "./mapper/mapper";
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container-xl">
+      <h1 className="display-1">Country list</h1>
+      <CountryList country={gettransformedCountries(countries)} />
     </div>
   );
-}
-
-export default App;
+};
