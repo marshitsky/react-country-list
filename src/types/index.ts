@@ -28,12 +28,12 @@ export interface ICountryAPINativeName {
 }
 
 export interface ICountry {
-  flags: string;
+  flag: string;
   name: string;
   capital: string;
-  population: string;
+  population: number;
   area: number;
-  region: number;
+  region: string;
 }
 
 export enum Color {

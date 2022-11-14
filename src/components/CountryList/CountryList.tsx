@@ -1,7 +1,7 @@
 import { ICountry } from "../../types";
 import { CountryItem } from "../CountryItem/CountryItem";
 interface IProps {
-  country: ICountry;
+  country: ICountry[];
 }
 
 export const CountryList = ({ country }: IProps) => {
