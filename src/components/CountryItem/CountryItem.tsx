@@ -9,7 +9,7 @@ interface IProps {
 
 export const CountryItem = ({ country }: IProps) => {
   return (
-    <ul className="list-group">
+    <>
       {Object.values(country).map(
         ({ flag, name, capital, region, area, population }) => (
           <li className="list-group-item" key={name}>
@@ -48,6 +48,6 @@ export const CountryItem = ({ country }: IProps) => {
           </li>
         )
       )}
-    </ul>
+    </>
   );
 };
