@@ -6,8 +6,8 @@ interface IProps {
 
 export const CountryList = ({ country }: IProps) => {
   return (
-    <div>
+    <ul className="list-group">
       <CountryItem country={country} />
-    </div>
+    </ul>
   );
 };
