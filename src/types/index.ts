@@ -12,10 +12,10 @@ export interface ICountryAPIFlag {
   svg: string;
 }
 
-export interface ICountryAPINativeName {
+export interface ICountryAPIName {
   common: string;
   official: string;
-  nativeName?: ICountryAPINativeLang;
+  nativeName: ICountryAPINativeLang;
 }
 
 export interface ICountryAPINativeLang {
@@ -47,4 +47,4 @@ export enum Color {
   Dark = "dark",
 }
 
-export type BadgeLabel = "area: " | "population: ";
+export type BadgeLabel = "area" | "population";

@@ -28,13 +28,13 @@ export const CountryItem = ({ country }: IProps) => {
               <strong>{region}</strong>
             </p>
             <div className="col d-flex align-items-center">
-              <Badge color={Color.Primary} badgeLabel="area: ">
-                {area}
+              <Badge color={Color.Primary} badgeLabel="area">
+                : {area}
               </Badge>
             </div>
             <div className="col d-flex align-items-center">
-              <Badge color={Color.Secondary} badgeLabel="population: ">
-                {population}
+              <Badge color={Color.Secondary} badgeLabel="population">
+                : {population}
               </Badge>
             </div>
           </div>
