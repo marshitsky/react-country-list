@@ -9,11 +9,9 @@ export interface IProps {
 
 export const Badge = ({ children, color, badgeLabel }: IProps) => {
   return (
-    <div>
-      <span className={`badge text-bg-${color}`}>
-        {badgeLabel}
-        {children}
-      </span>
-    </div>
+    <p className={`badge text-bg-${color}`}>
+      {badgeLabel}
+      {children}
+    </p>
   );
 };
