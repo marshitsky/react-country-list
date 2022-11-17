@@ -2,7 +2,7 @@ import { ICountryAPI } from "../types";
 import { ICountry } from "../types";
 import countries from "../country-data.json";
 
-export const gettransformedCountries = (
+export const getTransformedCountries = (
   countries: ICountryAPI[]
 ): ICountry[] => {
   return countries.map(({ flags, name, capital, region, area, population }) => {
