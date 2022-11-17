@@ -11,33 +11,20 @@ export const CountryItem = ({ country }: IProps) => {
   return (
     <>
       {country.map(({ flag, name, capital, region, area, population }) => (
-        <li className="list-group-item" key={name}>
-          <div className="row row-cols-2 row-cols-lg-6 g-2 g-lg-3 d-flex p-2 d-flex justify-content-between">
-            <img
-              src={flag}
-              className="img-thumbnail d-flex align-items-center"
-              alt=""
-            />
-            <p className="col d-flex align-items-center">
-              <strong>{name}</strong>
-            </p>
-            <p className="col d-flex align-items-center">
-              <strong>{capital}</strong>
-            </p>
-            <p className="col d-flex align-items-center">
-              <strong>{region}</strong>
-            </p>
-            <div className="col d-flex align-items-center">
-              <Badge color={Color.Primary} badgeLabel="area">
-                : {area}
-              </Badge>
-            </div>
-            <div className="col d-flex align-items-center">
-              <Badge color={Color.Secondary} badgeLabel="population">
-                : {population}
-              </Badge>
-            </div>
-          </div>
+        <li
+          className="row row-cols-6 align-items-center border fw-bold"
+          key={name}
+        >
+          <img src={flag} className="img-thumbnail" alt="" />
+          <p className="col">{name}</p>
+          <p className="col">{capital}</p>
+          <p className="col">{region}</p>
+          <Badge color={Color.Primary} badgeLabel="area">
+            : {area}
+          </Badge>
+          <Badge color={Color.Secondary} badgeLabel="population">
+            : {population}
+          </Badge>
         </li>
       ))}
     </>
