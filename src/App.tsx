@@ -3,10 +3,12 @@ import countries from "./country-data.json";
 import { getTransformedCountries } from "./mapper/mapper";
 
 export const App = () => {
+  const transformedCountries = getTransformedCountries(countries);
+
   return (
-    <div className="container-xl">
+    <div className="container-xxl">
       <h1 className="display-1">Country list</h1>
-      <CountryList country={getTransformedCountries(countries)} />
+      <CountryList countries={transformedCountries} />
     </div>
   );
 };
